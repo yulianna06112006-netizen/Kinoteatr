@@ -1,3 +1,4 @@
+/* QR CODE SECTION */
 .qrCode {
     padding: 40px 20px;
     background-color: #fff;
@@ -98,6 +99,7 @@
     align-self: center;
 }
 
+/* FOOTER */
 .footer {
     background-color: #fff;
     padding: 40px;
