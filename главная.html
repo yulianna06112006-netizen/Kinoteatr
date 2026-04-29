@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Кинотеатр</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    dsfsdfsdf
+
+<div id="header"></div>
+
+<main class="container">
+
+    <section class="banner">
+    <div class="banner-text">
+        <h1>Проект "Конец света"</h1>
+        <p>
+            Астронавт Райленд Грейс просыпается на космическом корабле...
+        </p>
+        <button>▶ Смотреть</button>
+    </div>
+</section>
+
+    <section class="trending">
+        <h2>В тренде</h2>
+
+        <div class="cards">
+
+    <div class="card">
+        <img src="img/Euphoria.png">
+        <h3>Эйфория</h3>
+        <p>2019, драма</p>
+    </div>
+
+    <div class="card">
+        <img src="img/Slovo.png">
+        <h3>Слово пацана</h3>
+        <p>2025, боевик</p>
+    </div>
+
+    <div class="card">
+        <img src="img/TCBR.png">
+        <h3>Твое сердце будет разбито</h3>
+        <p>2026, драма</p>
+    </div>
+
+    <div class="card">
+        <img src="img/Alice.png">
+        <h3>Алиса в стране чудес</h3>
+        <p>2025, фантастика</p>
+    </div>
+
+</div>
+
+        <button class="more">Показать ещё</button>
+    </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("components/header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("components/footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
 </body>
 </html>

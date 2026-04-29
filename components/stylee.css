@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #1e1e1e;
+    color: white;
+}
+
+.header input {
+    width: 300px;
+    padding: 8px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    background: #2b2b2b;
+    height: 100%;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+/* MAIN */
+.container {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* BANNER */
+.banner {
+    height: 250px;
+    background: url('../img/banner.jpg') center/cover no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.banner button {
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+
+/* TREND */
+.trending h2 {
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    width: 180px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.more {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+/* FOOTER */
+.footer {
+    margin-left: 220px;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: #ddd;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+.banner {
+    height: 260px;
+    background: url('../img/Konec.png') center/cover no-repeat;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    color: white;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 12px;
+}
+.banner-text {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 180px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.card p {
+    font-size: 12px;
+    color: gray;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #1f1f1f;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.online {
+    color: gray;
+    font-size: 14px;
+}
+
+.search input {
+    width: 350px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50%;
+}
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #2b2b2b;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar li {
+    margin: 15px 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.sidebar li:hover {
+    color: white;
+}
+.banner {
+    height: 260px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    color: white;
+
+    background:
+        linear-gradient(to right, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%),
+        url('../img/Konec.png') center/cover no-repeat;
+}
+.banner-text h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 14px;
+    max-width: 400px;
+    color: #ddd;
+}
+
+.banner button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.footer {
+    margin-left: 220px;
+    background: #eaeaea;
+    padding: 40px 30px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.chat-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
