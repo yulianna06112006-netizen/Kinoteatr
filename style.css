@@ -1,0 +1,92 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 40px;
+    gap: 30px;
+}
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+.kino {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+.searchContainer {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.searchInput {
+    width: 100%;
+    padding: 10px 45px 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #2a2a2a;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+.searchIcon {
+    position: absolute;
+    right: 15px;
+}
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification img {
+    width: 30px;
+    height: 30px;
+}
+.notification:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.vhod {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(116, 116, 116);
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.vhod img {
+    width: 25px;
+}
