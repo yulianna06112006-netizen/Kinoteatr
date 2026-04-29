@@ -36,8 +36,7 @@ h1 {
     font-size: 24px;
 }
 .searchContainer {
-    flex: 1;
-    max-width: 600px;
+    width: 600px;
     position: relative;
     display: flex;
     align-items: center;
@@ -70,9 +69,6 @@ h1 {
 .notification img {
     width: 30px;
     height: 30px;
-}
-.notification:hover {
-    background-color: rgba(255, 255, 255, 0.1);
 }
 .vhod {
     display: flex;
