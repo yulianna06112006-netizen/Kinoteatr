@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <div class="headerLeft">
             <h1>Кинотеатр</h1>
-            <a href="#" class="kino"><img src="./img/mdi_play.png" alt="" class="playIcon">Онлайн-кинотеатр</a>
+            <img src="./img/mdi_play.png" alt="">
+            <a href="#" class="kino">Онлайн-кинотеатр</a>
         </div>
 
         <div class="searchContainer">
             <input type="text" placeholder="Фильмы, сериалы, личности" class="searchInput">
-
             <img src="./img/material-symbols_search.png" alt="" class="searchIcon">
         </div>
 
@@ -29,28 +30,61 @@
             </a>
         </div>
     </header>
+
     <section class="qrCode">
-    <div class="qrContainer">
-        <div class="qr">
-            <img src="./img/qr.png" alt="" class="qr">
-            <div class="qrText">
-                <h3>Наведи камеру<br>телефона на QR</h3>
-                <p>Для быстрого входа через<br>приложение</p>
+        <div class="loginContainer">
+            
+            <div class="qrLeft">
+                <img src="./img/qr.png" alt="QR Code" class="qrImage">
+                <div class="qrText">
+                    <h3>Наведи камеру<br>телефона на QR</h3>
+                    <p>Для быстрого входа через<br>приложение</p>
+                </div>
             </div>
+            
+            <div class="ili">
+                Или
+            </div>
+            
+            <div class="loginForm">
+                <h2 class="loginTitle">Вход</h2>
+                <input type="text" placeholder="Email или телефон" class="inputField">
+                <input type="password" placeholder="Пароль" class="inputField">
+                <button class="loginBtn">Вход</button>
+            </div>
+
         </div>
-        
-        <div class="ili">
-            <span>Или</span>
-        </div>
-        
-        <div class="loginForm">
-            <h2 class="loginTitle">Вход</h2>
-            <input type="text" placeholder="Email или телефон" class="inputField">
-            <input type="password" placeholder="Пароль" class="inputField">
-            <button class="loginBtn">Вход</button>
-        </div>
-    </div>
     </section>
+
+    <section class="promoSection">
+        <div class="promoContainer">
+            
+            <div class="promoBlock">
+                <img src="./img/ri_diamond-line.png" alt="Sub" class="promoIcon">
+                <h3 class="promoTitle">Все подписки</h3>
+                <button class="promoAction">Подключить</button>
+            </div>
+
+            <div class="promoBlock">
+                <img src="./img/lsicon_badge-promotion-outline.png" alt="Promo" class="promoIcon">
+                <h3 class="promoTitle">Промокод</h3>
+                <button class="promoAction">Активировать</button>
+            </div>
+
+            <div class="promoLinks">
+                <a href="#" class="linkItem">
+                    <img src="./img/Group.png" alt="Bell" class="linkIcon">
+                    Уведомления
+                </a>
+                <a href="#" class="linkItem">
+                    <img src="./img/mdi_help-outline.png" alt="Help" class="linkIcon">
+                    Помощь
+                </a>
+            </div>
+
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footerContent">
             
@@ -85,8 +119,8 @@
                     <div class="supportButtons">
                         <button class="chatBtn">Написать в чате</button>
                         <div class="iconBox">
-                            <img src="./img/mail.png" alt="Почта">
-                            <img src="./img/phone.png" alt="Телефон">
+                            <img src="./img/material-symbols_mail-outline.png" alt="Почта">
+                            <img src="./img/bi_telephone.png" alt="Телефон">
                         </div>
                     </div>
                 </div>
@@ -94,14 +128,15 @@
             </div>
 
             <div class="socialRow">
-                <img src="./img/vk.png" alt="">
-                <img src="./img/instagram.png" alt="">
-                <img src="./img/ok.png" alt="">
-                <img src="./img/x.png" alt="">
-                <img src="./img/telegram.png" alt="">
+                <img src="./img/vk.png" alt="VK">
+                <img src="./img/lets-icons_insta.png" alt="Instagram">
+                <img src="./img/bxl_ok-ru.png" alt="OK">
+                <img src="./img/Vector.png" alt="X">
+                <img src="./img/ic_baseline-telegram.png" alt="Telegram">
             </div>
 
         </div>
     </footer>
+
 </body>
 </html>
