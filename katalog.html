@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр - Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="headerLeft">
+            <h1>Кинотеатр</h1>
+            <img src="./img/mdi_play.png" alt="">
+            <a href="#" class="kino">Онлайн-кинотеатр</a>
+        </div>
+
+        <div class="searchContainer">
+            <input type="text" placeholder="Фильмы, сериалы, личности" class="searchInput">
+            <img src="./img/material-symbols_search.png" alt="" class="searchIcon">
+        </div>
+
+        <div class="headerRight">
+            <a href="#" class="notification">
+                <img src="./img/mingcute_notification-line.png" alt="">
+            </a>
+            <a href="" class="vhod">
+                <img src="./img/icon-park-outline_people.png" alt="">
+                Юливаня
+            </a>
+        </div>
+    </header>
+
+        <section class="catalog">
+        <div class="catalogContainer">
+            
+            <!-- Фильтры и поиск -->
+            <div class="filters">
+                <input type="text" placeholder="Поиск" class="filterSearch">
+                
+                <div class="filterDropdown">
+                    <select name="" id="" >
+                        <option value="">Жанр</option>
+                        <option value="">Жанр2</option>
+                    </select>
+                        
+                    <!-- <img src="./img/arrow-down.png" alt=""> -->
+                </div>
+                <div class="filterDropdown">
+                    <select name="" id="" >
+                        <option value="">Год</option>
+                        <option value="">Год4</option>
+                    </select>
+                    <!-- <img src="./img/arrow-down.png" alt=""> -->
+                </div>
+                <div class="filterDropdown">
+                    <select name="" id="" >
+                        <option value="">Страна</option>
+                        <option value="">Страна</option>
+                    </select>                
+                    <!-- <img src="./img/arrow-down.png" alt=""> -->
+                </div>
+                <div class="filterDropdown">
+                    <select name="" id="" >
+                        <option value="">Рейтинг</option>
+                        <option value="">Рейтинг</option>
+                    </select>
+                    <!-- <img src="./img/arrow-down.png" alt=""> -->
+                </div>
+            </div>
+
+            <!-- Карточки категорий -->
+            <div class="categoryCards">
+                <div class="categoryCard">
+                    <h3>Фильмы</h3>
+                </div>
+                <div class="categoryCard">
+                    <h3>Сериалы</h3>
+                </div>
+                <div class="categoryCard">
+                    <h3>Мультфильмы</h3>
+                </div>
+                <div class="categoryCard">
+                    <h3>Телеканалы</h3>
+                </div>
+            </div>
+
+            <!-- Жанры -->
+            <div class="genresSection">
+                <h2>Жанры</h2>
+                <div class="genresGrid">
+                    <div class="genreColumn">
+                        <a href="#">Комедии</a>
+                        <a href="#">Боевики</a>
+                        <a href="#">Фантастика</a>
+                        <a href="#">Триллеры</a>
+                    </div>
+                    <div class="genreColumn">
+                        <a href="#">Приключения</a>
+                        <a href="#">Драмы</a>
+                        <a href="#">Мультфильмы</a>
+                        <a href="#">Фэнтези</a>
+                    </div>
+                    <div class="genreColumn">
+                        <a href="#">Семейное</a>
+                        <a href="#">Мелодрамы</a>
+                        <a href="#">Детективы</a>
+                        <a href="#">Аниме</a>
+                    </div>
+                    <div class="genreColumn">
+                        <a href="#">Музыкальное</a>
+                        <a href="#">Биографии</a>
+                        <a href="#">Военное</a>
+                        <a href="#">Криминальное</a>
+                    </div>
+                    <div class="genreColumn">
+                        <a href="#">Ужасы</a>
+                        <a href="#">Историческое</a>
+                        <a href="#">Документальное</a>
+                        <a href="#">Вестерны</a>
+                    </div>
+                    <div class="genreColumn">
+                        <a href="#">Артхаус</a>
+                        <a href="#">Спорт</a>
+                        <a href="#">Короткий метр</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footerContent">
+            
+            <div class="footerGrid">
+                
+                <div class="footerCol">
+                    <h3>О нас</h3>
+                    <a href="#">О компании</a>
+                    <a href="#">Вакансии</a>
+                    <a href="#">Программа бета-тестирования</a>
+                    <a href="#">Информация для партнёров</a>
+                    <a href="#">Размещение рекламы</a>
+                    <a href="#">Пользовательское соглашение</a>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Оставить отзыв</a>
+                </div>
+
+                <div class="footerCol">
+                    <h3>Разделы</h3>
+                    <a href="#">Главная</a>
+                    <a href="#">Подписки</a>
+                    <a href="#">Фильмы</a>
+                    <a href="#">Сериалы</a>
+                    <a href="#">Телеканалы</a>
+                </div>
+
+                <div class="footerCol">
+                    <h3>Служба поддержки</h3>
+                    <p class="supportText">Мы всегда готовы вам помочь.</p>
+                    <p class="supportText">Наши операторы онлайн 24/7</p>
+                    
+                    <div class="supportButtons">
+                        <button class="chatBtn">Написать в чате</button>
+                        <div class="iconBox">
+                            <img src="./img/material-symbols_mail-outline.png" alt="Почта">
+                            <img src="./img/bi_telephone.png" alt="Телефон">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="socialRow">
+                <img src="./img/vk.png" alt="VK">
+                <img src="./img/lets-icons_insta.png" alt="Instagram">
+                <img src="./img/bxl_ok-ru.png" alt="OK">
+                <img src="./img/Vector.png" alt="X">
+                <img src="./img/ic_baseline-telegram.png" alt="Telegram">
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

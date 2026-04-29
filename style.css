@@ -330,3 +330,134 @@ h1 {
     height: 30px;
     cursor: pointer;
 }
+/* КАТАЛОГ */
+.catalog {
+    padding: 30px 40px;
+    background-color: #fff;
+    min-height: 600px;
+}
+
+.catalogContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Фильтры и поиск */
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filterSearch {
+    width: 250px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.filterSearch::placeholder {
+    color: #666;
+}
+
+.filterDropdown {
+    position: relative;
+}
+
+.filterDropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 12px 40px 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    min-width: 120px;
+}
+
+.filterDropdown::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #666;
+    pointer-events: none;
+}
+
+.filterDropdown select:hover {
+    background-color: #d0d0d0;
+}
+
+/* Карточки категорий */
+.categoryCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.categoryCard {
+    background-color: #e0e0e0;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.categoryCard:hover {
+    transform: translateY(-3px);
+}
+
+.categoryCard h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Жанры */
+.genresSection {
+    margin-top: 40px;
+}
+
+.genresSection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.genresGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.genreColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.genreColumn a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.genreColumn a:hover {
+    color: #000;
+    text-decoration: underline;
+}
