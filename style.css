@@ -284,15 +284,15 @@ body {
     left: 0;
     width: 220px;
     height: 100%;
-    background: #2b2b2b;
-    color: white;
+    background: #D9D9D9;
+    color: #767575;
     padding-top: 20px;
 }
 
 .sidebar li {
     margin: 15px 20px;
     cursor: pointer;
-    color: #ccc;
+    color: #767575;
 }
 
 .sidebar li:hover {
@@ -358,4 +358,10 @@ body {
     background: #ccc;
     border-radius: 6px;
     cursor: pointer;
+}
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
