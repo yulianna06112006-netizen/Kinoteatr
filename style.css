@@ -1,11 +1,15 @@
 /* ОБЩИЕ СТИЛИ */
+/* Глобальное применение шрифта Jost */
+body, body * {
+  font-family: "Jost", sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
   background-color: #f5f5f5;
 }
 
@@ -27,7 +31,7 @@ h1 {
   font-size: 32px;
   color: white;
   font-weight: bold;
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
 }
 .kino {
   color: white;
@@ -39,7 +43,7 @@ h1 {
   gap: 8px;
   padding: 8px 20px;
   border-radius: 10px;
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
 }
 .searchContainer {
   width: 600px;
@@ -321,7 +325,7 @@ h1 {
   border-radius: 10px;
   background-color: #e0e0e0;
   font-size: 14px;
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
   outline: none;
 }
 .filterSearch::placeholder {
@@ -339,7 +343,7 @@ h1 {
   border-radius: 10px;
   background-color: #e0e0e0;
   font-size: 14px;
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
   cursor: pointer;
   outline: none;
   min-width: 120px;
@@ -449,36 +453,50 @@ h1 {
   border-radius: 50%;
 }
 
+/* Шапка — выше сайдбара */
+header {
+  position: relative;
+  z-index: 20;
+  background-color: #000000;
+}
 /* Сайдбар */
+/* Фиксированный сайдбар — начинается после шапки */
+/* ========== ЖЁСТКАЯ ФИКСАЦИЯ САЙДБАРА ========== */
 .sidebar {
-  position: fixed;
-  top: 70px;
+  position: fixed !important;
+  top: 70px;              /* Замените 70 на реальную высоту вашей шапки */
   left: 0;
   width: 220px;
-  height: 100%;
+  height: calc(100vh - 70px);
   background: #D9D9D9;
-  color: #767575;
+  overflow-y: auto;
+  z-index: 1000;
   padding-top: 20px;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 20px;
-}
-.sidebar li {
-  margin: 15px 20px;
-  cursor: pointer;
-  color: #767575;
-}
-.sidebar li:hover {
-  color: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-/* Основной контейнер контента */
+/* Контент теперь не будет заезжать под полосу */
 .container {
   margin-left: 220px;
+  margin-top: 70px;        /* чтобы не уходил под шапку */
   padding: 20px;
 }
 
+/* Фиксируем шапку, чтобы она была всегда сверху */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: #000000;
+  /* остальные стили шапки оставьте как есть */
+}
+
+/* Футер тоже сдвигаем, чтобы не заезжал под сайдбар */
+.footer {
+  margin-left: 220px;
+}
 /* Баннер */
 .banner {
   height: 260px;
@@ -582,4 +600,12 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+body {
+  font-weight: 400;   /* обычный */
+  font-style: normal;
+}
+
+h1, h2, h3, .footerCol h3, .trending h2 {
+  font-weight: 600;   /* полужирный для заголовков */
 }
