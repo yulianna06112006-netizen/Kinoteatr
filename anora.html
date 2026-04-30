@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анора (2024) — Кинотеатр</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header"></div>
+
+<main class="movie-page">
+    <div class="movie-container">
+
+        <!-- Левая колонка: постер -->
+        <div class="movie-poster">
+            <img src="img/AnoraBanner.png" alt="Анора постер">
+        </div>
+
+        <!-- Правая колонка: информация -->
+        <div class="movie-info">
+            <h1>Анора (2024)</h1>
+            <div class="movie-genre">Драма, мелодрама, комедия</div>
+            
+            <div class="movie-details">
+                <p><strong>Страна:</strong> США</p>
+                <p><strong>Год производства:</strong> 2024</p>
+                <p><strong>Жанр:</strong> драма, мелодрама, комедия</p>
+                <p><strong>Актёры:</strong> Майки Мэдисон, Марк Эйдельштейн, Юра Борисов, Карен Карагулян, Ваче Томасян, Дарья Екамасова, Алексей Серебряков</p>
+                <p><strong>Режиссёр:</strong> Шон Бейкер</p>
+                <p><strong>Сценарий:</strong> Шон Бейкер</p>
+                <p><strong>Продюсер:</strong> Шон Бейкер, Алекс Коко, Саманта Квон</p>
+                <p><strong>Композитор:</strong> Джозеф Каплабо</p>
+                <p><strong>Монтаж:</strong> Шон Бейкер</p>
+                <p><strong>Бюджет:</strong> $6 000 000</p>
+                <p><strong>Сборы в США:</strong> $20 474 295</p>
+                <p><strong>Сборы в России:</strong> $3 289 444</p>
+                <p><strong>Сборы в мире:</strong> $57 395 612</p>
+            </div>
+
+            <div class="movie-premieres">
+                <p><strong>Премьера в России:</strong> 17 октября 2024</p>
+                <p><strong>Премьера в мире:</strong> 21 мая 2024</p>
+                <p><strong>Цифровой релиз:</strong> 21 января 2025</p>
+                <p><strong>Возраст:</strong> 18+</p>
+                <p><strong>Рейтинг MPAA:</strong> R</p>
+                <p><strong>Время:</strong> 2 ч 19 мин</p>
+            </div>
+
+            <button class="movie-watch-btn">▶ Смотреть</button>
+        </div>
+    </div>
+
+    <!-- Блок с описанием и трейлером -->
+    <div class="movie-description">
+        <h2>Описание</h2>
+        <p>Бруклин. Стриптизерша Анора, предпочитающая имя Эни, знакомится с сыном русского олигарха Ваней, который проводит всё время в вечеринках и развлечениях. Вскоре парень выкупает время Эни на неделю, предлагает слетать в Вегас, а там молодые люди спонтанно женятся. Узнав об этом из газет, родители Вани приходят в ярость и срочно вылетают из России в США, а разобраться в ситуации велят нью-йоркскому армянину Торосу, который должен был присматривать за их сыном.</p>
+        
+        <div class="trailer-block">
+            <h3>Трейлер (Дублированный)</h3>
+            <p>7 января 2025</p>
+            <div class="trailer-placeholder">🎬 [Здесь будет видео трейлера]</div>
+        </div>
+    </div>
+
+    <!-- Блок с вкладками -->
+    <div class="movie-tabs">
+        <button class="tab active">Обзор</button>
+        <button class="tab">Награды</button>
+        <button class="tab">Премьеры</button>
+        <button class="tab">Изображения</button>
+        <button class="tab">Трейлеры</button>
+        <button class="tab">Отзывы</button>
+        <button class="tab">Ещё...</button>
+    </div>
+
+    <!-- Рейтинг фильма -->
+    <div class="movie-rating">
+        <h3>Рейтинг фильма</h3>
+        <div class="rating-number">8</div>
+        <div class="rating-bar">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span class="active">8</span><span>9</span><span>10</span>
+        </div>
+    </div>
+
+    <!-- Полный обзор -->
+    <div class="movie-review">
+        <p>«Анора» (англ. Anora) — американский романтический комедийно-драматический фильм 2024 года американского режиссёра и сценариста Шона Бейкера. По сюжету молодая секс-работница Анора (Майки Мэдисон) выходит замуж за Ивана Захарова (Марк Эйдельштейн), сына российского олигарха (Алексей Серебряков). Узнав об этом, родители Ивана готовы пойти на всё, чтобы аннулировать брак. В фильме также снимались Юра Борисов, Карен Карагулян, Ваче Томасян и Дарья Екамасова.</p>
+    </div>
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("components/header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("components/footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
