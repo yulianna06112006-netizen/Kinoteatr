@@ -464,7 +464,7 @@ header {
 /* ========== ЖЁСТКАЯ ФИКСАЦИЯ САЙДБАРА ========== */
 .sidebar {
   position: fixed !important;
-  top: 70px;              /* Замените 70 на реальную высоту вашей шапки */
+  top: 70px;
   left: 0;
   width: 220px;
   height: calc(100vh - 70px);
@@ -473,6 +473,26 @@ header {
   z-index: 1000;
   padding-top: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  text-align: center;
+  padding: 14px 0;
+  cursor: pointer;
+  color: #767575;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.sidebar li:hover {
+  background: rgba(0,0,0,0.05);
+  color: #000;
 }
 
 /* Контент теперь не будет заезжать под полосу */
@@ -554,6 +574,8 @@ header {
 }
 .card img {
   width: 100%;
+  aspect-ratio: 2 / 3;   /* стандартный постерный формат */
+  object-fit: cover;
   border-radius: 8px;
 }
 .card:hover {
