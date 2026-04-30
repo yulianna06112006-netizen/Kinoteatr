@@ -468,7 +468,7 @@ header {
   left: 0;
   width: 220px;
   height: calc(100vh - 70px);
-  background: #D9D9D9;
+  background: #F6F6F6;
   overflow-y: auto;
   z-index: 1000;
   padding-top: 20px;
@@ -494,15 +494,46 @@ header {
   background: rgba(0,0,0,0.05);
   color: #000;
 }
+.sidebar li {
+  text-align: left;          
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #767575;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;          
+  align-items: center;      
+  gap: 12px;               
+}
 
-/* Контент теперь не будет заезжать под полосу */
+/*  cтиль иконок */
+.sidebar-icon {
+  width: 22px;               
+  height: 22px;            
+  object-fit: contain;      
+}
+
+/*стильссылок в сайдбаре */
+.sidebar li a {
+  text-decoration: none;
+  color: #767575;
+  flex: 1;                  
+}
+
+.sidebar li a:hover {
+  color: #f70909;
+}
+
+.sidebar li:hover {
+  background: rgba(0,0,0,0.05);
+}
+
 .container {
   margin-left: 220px;
-  margin-top: 70px;        /* чтобы не уходил под шапку */
+  margin-top: 70px;       
   padding: 20px;
 }
 
-/* Фиксируем шапку, чтобы она была всегда сверху */
 header {
   position: fixed;
   top: 0;
@@ -510,23 +541,28 @@ header {
   width: 100%;
   z-index: 2000;
   background-color: #000000;
-  /* остальные стили шапки оставьте как есть */
 }
 
-/* Футер тоже сдвигаем, чтобы не заезжал под сайдбар */
 .footer {
   margin-left: 220px;
 }
 /* Баннер */
 .banner {
-  height: 260px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  padding: 25px;
-  color: white;
-  background: linear-gradient(to right, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%), url('../img/Konec.png') center/cover no-repeat;
   position: relative;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #000000;  /* ← чёрный фон, чтобы не было белого просвета */
+  background-image: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.2) 70%, transparent 100%),
+                    url('../img/Konec.png');
+  background-size: cover, cover;
+  background-position: center, center 25%;   /* 65% = фото чуть опущено вниз */
+  background-repeat: no-repeat, no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px;
+  color: white;
 }
 .banner::after {
   content: "";
@@ -536,27 +572,56 @@ header {
   border-radius: 12px;
 }
 .banner-text {
-  position: relative;
+  max-width: 30%;
   z-index: 2;
-  max-width: 500px;
+  position: relative;
 }
+
 .banner-text h1 {
-  font-size: 26px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 18px;      /* увеличил отступ под заголовком */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
+
 .banner-text p {
   font-size: 14px;
-  max-width: 400px;
-  color: #ddd;
+  line-height: 1.6;         /* больше воздуха между строк */
+  margin-bottom: 14px;      /* отступ между абзацами */
+  opacity: 0.9;
 }
-.banner button {
-  margin-top: 15px;
-  padding: 10px 18px;
+
+.banner-text .actors {
+  margin-bottom: 0;          /* последний абзац без нижнего отступа */
+}
+.watch-btn {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  background: #3b3b3b;
   border: none;
-  border-radius: 6px;
-  background: black;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, background 0.2s;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-family: inherit;     /* унаследует Jost */
+}
+
+.watch-btn:hover {
+  background: #f40612;
+  transform: scale(1.02);
+}
+
+/* Убираем старый псевдоэлемент, если был */
+.banner::after {
+  display: none;
 }
 
 /* Тренды и карточки фильмов */
