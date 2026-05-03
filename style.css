@@ -1,708 +1,606 @@
-/* ОБЩИЕ СТИЛИ */
-/* Глобальное применение шрифта Jost */
-body, body * {
-  font-family: "Jost", sans-serif;
-}
+/* ========== ГЛОБАЛЬНЫЕ СТИЛИ ========== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: "Jost", sans-serif;
-  background-color: #f5f5f5;
-}
-
-/* ШАПКА */
-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: #000000;
-  padding: 15px 40px;
-  gap: 30px;
-}
-.headerLeft {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-h1 {
-  font-size: 32px;
-  color: white;
-  font-weight: bold;
-  font-family: "Jost", sans-serif;
-}
-.kino {
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-family: "Jost", sans-serif;
-}
-.searchContainer {
-  width: 600px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.searchInput {
-  width: 100%;
-  padding: 10px 45px 10px 20px;
-  border: none;
-  border-radius: 25px;
-  background-color: #2a2a2a;
-  color: white;
-  font-size: 14px;
-  outline: none;
-}
-.searchIcon {
-  position: absolute;
-  right: 15px;
-}
-.headerRight {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.notification {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.notification img {
-  width: 30px;
-  height: 30px;
-}
-.vhod {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 20px;
-  color: white;
-  background-color: rgb(116, 116, 116);
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-.vhod img {
-  width: 25px;
-}
-.vhod:hover {
-  background-color: rgb(90, 90, 90);
-}
-
-/* СЕКЦИЯ С QR КОДОМ */
-.qrCode {
-  padding: 60px 20px;
-  background-color: #fff;
-}
-.loginContainer {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-.qrLeft {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-}
-.qrImage {
-  width: 180px;
-  height: 180px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.qrText {
-  text-align: center;
-}
-.qrText h3 {
-  font-size: 24px;
-  margin: 0 0 10px 0;
-  line-height: 1.2;
-}
-.qrText p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-}
-.loginForm {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.loginTitle {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.inputField {
-  width: 100%;
-  max-width: 500px;
-  padding: 18px 20px;
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-.loginBtn {
-  padding: 12px 40px;
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-.loginBtn:hover {
-  background-color: #d0d0d0;
-}
-
-/* ПРОМО СЕКЦИЯ */
-.promoSection {
-  padding: 40px 20px;
-  background-color: #fff;
-}
-.promoContainer {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-.promoBlock {
-  background-color: #e0e0e0;
-  width: 280px;
-  height: 140px;
-  border-radius: 15px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.promoIcon {
-  width: 24px;
-  height: 24px;
-}
-.promoTitle {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-}
-.promoAction {
-  background: none;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: left;
-  padding: 0;
-  color: #000;
-}
-.promoLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 30px;
-}
-.linkItem {
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.linkIcon {
-  width: 20px;
-  height: 20px;
-}
-
-/* ПОДВАЛ */
-.footer {
-  background-color: #fff;
-  padding: 40px;
-  border-top: 1px solid #000;
-}
-.footerContent {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.footerGrid {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #000;
-  margin-bottom: 30px;
-}
-.footerCol h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  margin-top: 0;
-}
-.footerCol a {
-  display: block;
-  text-decoration: none;
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-.footerCol a:hover {
-  color: #000;
-}
-.supportText {
-  font-size: 14px;
-  color: #666;
-  margin: 5px 0;
-}
-.supportButtons {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-  align-items: center;
-}
-.chatBtn {
-  background-color: #e0e0e0;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.iconBox img {
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
-  cursor: pointer;
-  background: #e0e0e0;
-  padding: 5px;
-  border-radius: 5px;
-}
-.socialRow {
-  display: flex;
-  gap: 20px;
-}
-.socialRow img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-/* КАТАЛОГ */
-.catalog {
-  padding: 30px 40px;
-  background-color: #fff;
-  min-height: 600px;
-}
-.catalogContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.filters {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-.filterSearch {
-  width: 250px;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 10px;
-  background-color: #e0e0e0;
-  font-size: 14px;
-  font-family: "Jost", sans-serif;
-  outline: none;
-}
-.filterSearch::placeholder {
-  color: #666;
-}
-.filterDropdown {
-  position: relative;
-}
-.filterDropdown select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding: 12px 40px 12px 20px;
-  border: none;
-  border-radius: 10px;
-  background-color: #e0e0e0;
-  font-size: 14px;
-  font-family: "Jost", sans-serif;
-  cursor: pointer;
-  outline: none;
-  min-width: 120px;
-}
-.filterDropdown::after {
-  content: "▼";
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 10px;
-  color: #666;
-  pointer-events: none;
-}
-.filterDropdown select:hover {
-  background-color: #d0d0d0;
-}
-.categoryCards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 40px;
-}
-.categoryCard {
-  background-color: #e0e0e0;
-  height: 200px;
-  border-radius: 12px;
-  display: flex;
-  align-items: flex-start;
-  padding: 20px;
-  cursor: pointer;
-}
-.categoryCard:hover {
-  transform: translateY(-3px);
-}
-.categoryCard h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-.genresSection {
-  margin-top: 40px;
-}
-.genresSection h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-.genresGrid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
-}
-.genreColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.genreColumn a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-}
-.genreColumn a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-
-/* Альтернативная/дополнительная структура шапки */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #1f1f1f;
-  color: white;
-}
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-}
-.online {
-  color: gray;
-  font-size: 14px;
-}
-.search input {
-  width: 350px;
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: none;
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.avatar {
-  width: 30px;
-  height: 30px;
-  background: #ccc;
-  border-radius: 50%;
-}
-
-/* Шапка — выше сайдбара */
-header {
-  position: relative;
-  z-index: 20;
-  background-color: #000000;
-}
-/* Сайдбар */
-/* Фиксированный сайдбар — начинается после шапки */
-/* ========== ЖЁСТКАЯ ФИКСАЦИЯ САЙДБАРА ========== */
-.sidebar {
-  position: fixed !important;
-  top: 70px;
-  left: 0;
-  width: 220px;
-  height: calc(100vh - 70px);
-  background: #F6F6F6;
-  overflow-y: auto;
-  z-index: 1000;
-  padding-top: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  text-align: center;
-  padding: 14px 0;
-  cursor: pointer;
-  color: #767575;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-
-.sidebar li:hover {
-  background: rgba(0,0,0,0.05);
-  color: #000;
-}
-.sidebar li {
-  text-align: left;          
-  padding: 12px 20px;
-  cursor: pointer;
-  color: #767575;
-  font-weight: 500;
-  transition: all 0.2s;
-  display: flex;          
-  align-items: center;      
-  gap: 12px;               
-}
-
-/*  cтиль иконок */
-.sidebar-icon {
-  width: 22px;               
-  height: 22px;            
-  object-fit: contain;      
-}
-
-/*стильссылок в сайдбаре */
-.sidebar li a {
-  text-decoration: none;
-  color: #767575;
-  flex: 1;                  
-}
-
-.sidebar li a:hover {
-  color: #f70909;
-}
-
-.sidebar li:hover {
-  background: rgba(0,0,0,0.05);
-}
-
-.container {
-  margin-left: 220px;
-  margin-top: 70px;       
-  padding: 20px;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000;
-  background-color: #000000;
-}
-
-.footer {
-  margin-left: 220px;
-}
-/* Баннер */
-.banner {
-  position: relative;
-  height: 300px;
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: #000000;  /* ← чёрный фон, чтобы не было белого просвета */
-  background-image: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.2) 70%, transparent 100%),
-                    url('../img/Konec.png');
-  background-size: cover, cover;
-  background-position: center, center 25%;   /* 65% = фото чуть опущено вниз */
-  background-repeat: no-repeat, no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 30px;
-  color: white;
-}
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  border-radius: 12px;
-}
-.banner-text {
-  max-width: 30%;
-  z-index: 2;
-  position: relative;
-}
-
-.banner-text h1 {
-  font-size: 28px;
-  margin-bottom: 18px;      /* увеличил отступ под заголовком */
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-.banner-text p {
-  font-size: 14px;
-  line-height: 1.6;         /* больше воздуха между строк */
-  margin-bottom: 14px;      /* отступ между абзацами */
-  opacity: 0.9;
-}
-
-.banner-text .actors {
-  margin-bottom: 0;          /* последний абзац без нижнего отступа */
-}
-.watch-btn {
-  position: absolute;
-  bottom: 25px;
-  right: 30px;
-  background: #3b3b3b;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 40px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.2s, background 0.2s;
-  z-index: 10;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  font-family: inherit;     /* унаследует Jost */
-}
-
-.watch-btn:hover {
-  background: #f40612;
-  transform: scale(1.02);
-}
-
-/* Убираем старый псевдоэлемент, если был */
-.banner::after {
-  display: none;
-}
-
-/* Тренды и карточки фильмов */
-.trending h2 {
-  margin: 20px 0;
-}
-.cards {
-  display: flex;
-  gap: 20px;
-}
-.card {
-  width: 180px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.card img {
-  width: 100%;
-  aspect-ratio: 2 / 3;   /* стандартный постерный формат */
-  object-fit: cover;
-  border-radius: 8px;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card h3 {
-  font-size: 14px;
-  margin-top: 8px;
-}
-.card p {
-  font-size: 12px;
-  color: gray;
-}
-.more {
-  margin-top: 15px;
-  padding: 10px;
-}
-
-/* Дополнительные стили для футера */
-.footer-grid {
-  display: flex;
-  justify-content: space-between;
-}
-.footer h3 {
-  margin-bottom: 10px;
-}
-.footer p {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
-}
-.chat-btn {
-  margin-top: 10px;
-  padding: 10px 15px;
-  border: none;
-  background: #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* Шрифт Jost */
-.jost {
-  font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-body {
-  font-weight: 400;   /* обычный */
-  font-style: normal;
+    font-family: "Jost", sans-serif;
+    background-color: #f5f5f5;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h1, h2, h3, .footerCol h3, .trending h2 {
-  font-weight: 600;   /* полужирный для заголовков */
+    font-weight: 600;
 }
-/* ===== СТРАНИЦА ФИЛЬМА ===== */
+
+/* ========== ШАПКА (динамическая фиксация) ========== */
+/* По умолчанию шапка статическая (для страниц без сайдбара) */
+header {
+    position: static;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 40px;
+    gap: 30px;
+    z-index: 2000;
+}
+
+/* Если на странице есть сайдбар — фиксируем шапку */
+body:has(.sidebar) header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+h1 {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    font-family: "Jost", sans-serif;
+}
+
+.kino {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: "Jost", sans-serif;
+}
+
+.searchContainer {
+    width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px 45px 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.searchIcon {
+    position: absolute;
+    right: 15px;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification img {
+    width: 30px;
+    height: 30px;
+}
+
+.vhod {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    color: white;
+    background-color: rgb(116, 116, 116);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.vhod img {
+    width: 25px;
+}
+
+.vhod:hover {
+    background-color: rgb(90, 90, 90);
+}
+
+/* ========== САЙДБАР ========== */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 70px);
+    background: #F6F6F6;
+    overflow-y: auto;
+    z-index: 1000;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    text-align: left;
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #767575;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #767575;
+    flex: 1;
+}
+
+.sidebar li a:hover {
+    color: #f70909;
+}
+
+.sidebar li:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+/* ========== ОСНОВНОЙ КОНТЕНТ (страницы с сайдбаром) ========== */
+/* Главная страница с баннером и трендами */
+.container {
+    margin-left: 220px;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+/* Страница фильма Anora */
 .movie-page {
     margin-left: 220px;
+    margin-top: 70px;
     padding: 30px;
     max-width: 1200px;
 }
 
+/* ========== СТРАНИЦЫ БЕЗ САЙДБАРА (index.html, katalog.html) ========== */
+/* Контент идёт сразу после статической шапки, отступы не нужны */
+.qrCode, .catalog, .promoSection {
+    /* авто-отступы, без margin-top */
+}
+
+/* ========== БЛОК С QR-КОДОМ И ВХОДОМ (index.html) ========== */
+.qrCode {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.loginContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.qrLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.qrImage {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.qrText {
+    text-align: center;
+}
+
+.qrText h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.qrText p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.ili {
+    font-size: 18px;
+    font-weight: 500;
+    color: #999;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.loginForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginTitle {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.inputField {
+    width: 100%;
+    max-width: 500px;
+    padding: 18px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.loginBtn {
+    padding: 12px 40px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.loginBtn:hover {
+    background-color: #d0d0d0;
+}
+
+/* ========== ПРОМО-БЛОКИ (index.html) ========== */
+.promoSection {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.promoContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.promoBlock {
+    background-color: #e0e0e0;
+    width: 280px;
+    height: 140px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promoIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.promoTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.promoAction {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    color: #000;
+}
+
+.promoLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.linkItem {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ========== СТРАНИЦА КАТАЛОГА ========== */
+.catalog {
+    padding: 30px 40px;
+    background-color: #fff;
+    min-height: 600px;
+}
+
+.catalogContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filterSearch {
+    width: 250px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    font-size: 14px;
+    font-family: "Jost", sans-serif;
+    outline: none;
+}
+
+.filterSearch::placeholder {
+    color: #666;
+}
+
+.filterDropdown {
+    position: relative;
+}
+
+.filterDropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 12px 40px 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    font-size: 14px;
+    font-family: "Jost", sans-serif;
+    cursor: pointer;
+    outline: none;
+    min-width: 120px;
+}
+
+.filterDropdown::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #666;
+    pointer-events: none;
+}
+
+.filterDropdown select:hover {
+    background-color: #d0d0d0;
+}
+
+.categoryCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.categoryCard {
+    background-color: #e0e0e0;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.categoryCard:hover {
+    transform: translateY(-3px);
+}
+
+.categoryCard h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.genresSection {
+    margin-top: 40px;
+}
+
+.genresSection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.genresGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.genreColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.genreColumn a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.genreColumn a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ========== БАННЕР НА ГЛАВНОЙ ========== */
+.banner {
+    position: relative;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.2) 70%, transparent 100%),
+                      url('../img/Konec.png');
+    background-size: cover, cover;
+    background-position: center, center 25%;
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+}
+
+.banner-text {
+    max-width: 30%;
+    z-index: 2;
+    position: relative;
+}
+
+.banner-text h1 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.banner-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+
+.banner-text .actors {
+    margin-bottom: 0;
+}
+
+.watch-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    background: #3b3b3b;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: inherit;
+}
+
+.watch-btn:hover {
+    background: #f40612;
+    transform: scale(1.02);
+}
+
+/* ========== ТРЕНДЫ И КАРТОЧКИ ========== */
+.trending h2 {
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.card p {
+    font-size: 12px;
+    color: gray;
+}
+
+.more {
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ========== СТРАНИЦА ФИЛЬМА (anora.html) ДЕТАЛИ ========== */
 .movie-container {
     display: flex;
     gap: 40px;
@@ -785,7 +683,6 @@ h1, h2, h3, .footerCol h3, .trending h2 {
     background: #f40612;
 }
 
-/* Описание и трейлер */
 .movie-description {
     background: #fff;
     border-radius: 16px;
@@ -825,7 +722,6 @@ h1, h2, h3, .footerCol h3, .trending h2 {
     color: #666;
 }
 
-/* Вкладки */
 .movie-tabs {
     display: flex;
     gap: 5px;
@@ -856,7 +752,6 @@ h1, h2, h3, .footerCol h3, .trending h2 {
     color: white;
 }
 
-/* Рейтинг */
 .movie-rating {
     background: #fff;
     border-radius: 16px;
@@ -905,11 +800,168 @@ h1, h2, h3, .footerCol h3, .trending h2 {
     background: #ccc;
 }
 
-/* Полный обзор */
 .movie-review {
     background: #fff;
     border-radius: 16px;
     padding: 25px 30px;
     margin-bottom: 30px;
     line-height: 1.6;
+}
+
+/* ========== ПОДВАЛ ========== */
+.footer {
+    background-color: #fff;
+    padding: 40px;
+    border-top: 1px solid #000;
+}
+
+/* Для страниц с сайдбаром — подвал сдвигается вправо */
+body:has(.sidebar) .footer {
+    margin-left: 220px;
+}
+
+.footerContent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footerGrid {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footerCol h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.footerCol a {
+    display: block;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footerCol a:hover {
+    color: #000;
+}
+
+.supportText {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.supportButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chatBtn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.iconBox img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    background: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.socialRow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.socialRow img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+    .searchContainer {
+        width: 100%;
+        order: 3;
+        margin-top: 10px;
+    }
+    .headerLeft, .headerRight {
+        flex: 1;
+    }
+    .promoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .promoBlock {
+        width: 100%;
+        max-width: 400px;
+    }
+    .categoryCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .genresGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footerGrid {
+        flex-direction: column;
+    }
+    .movie-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-poster {
+        width: 100%;
+        max-width: 300px;
+    }
+    .movie-details, .movie-premieres {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        margin-top: 70px;
+    }
+    body:has(.sidebar) .container,
+    body:has(.sidebar) .movie-page,
+    body:has(.sidebar) .footer {
+        margin-left: 0;
+    }
+    .container, .movie-page {
+        margin-left: 0;
+    }
+    .banner-text {
+        max-width: 60%;
+    }
+    .cards {
+        justify-content: center;
+    }
 }
