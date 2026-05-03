@@ -12,12 +12,17 @@ body {
     font-style: normal;
 }
 
+/* Страницы входа и профиля — полностью белые */
+body:has(.qrCode),
+body:has(.profile-page) {
+    background-color: #fff;
+}
+
 h1, h2, h3, .footerCol h3, .trending h2 {
     font-weight: 600;
 }
 
-/* ========== ШАПКА (динамическая фиксация) ========== */
-/* По умолчанию шапка статическая (для страниц без сайдбара) */
+/* ========== ШАПКА ========== */
 header {
     position: static;
     width: 100%;
@@ -29,7 +34,7 @@ header {
     z-index: 2000;
 }
 
-/* Если на странице есть сайдбар — фиксируем шапку */
+/* Если на странице есть сайдбар — шапка фиксируется */
 body:has(.sidebar) header {
     position: fixed;
     top: 0;
@@ -178,14 +183,12 @@ h1 {
 }
 
 /* ========== ОСНОВНОЙ КОНТЕНТ (страницы с сайдбаром) ========== */
-/* Главная страница с баннером и трендами */
 .container {
     margin-left: 220px;
     margin-top: 70px;
     padding: 20px;
 }
 
-/* Страница фильма Anora */
 .movie-page {
     margin-left: 220px;
     margin-top: 70px;
@@ -193,13 +196,12 @@ h1 {
     max-width: 1200px;
 }
 
-/* ========== СТРАНИЦЫ БЕЗ САЙДБАРА (index.html, katalog.html) ========== */
-/* Контент идёт сразу после статической шапки, отступы не нужны */
+/* ========== СТРАНИЦЫ БЕЗ САЙДБАРА ========== */
 .qrCode, .catalog, .promoSection {
-    /* авто-отступы, без margin-top */
+    /* без дополнительных отступов */
 }
 
-/* ========== БЛОК С QR-КОДОМ И ВХОДОМ (index.html) ========== */
+/* ========== БЛОК С QR-КОДОМ И ВХОДОМ ========== */
 .qrCode {
     padding: 60px 20px;
     background-color: #fff;
@@ -290,10 +292,9 @@ h1 {
     background-color: #d0d0d0;
 }
 
-/* ========== ПРОМО-БЛОКИ (index.html) ========== */
+/* ========== ПРОМО-БЛОКИ ========== */
 .promoSection {
     padding: 40px 20px;
-    background-color: #fff;
 }
 
 .promoContainer {
@@ -496,7 +497,7 @@ h1 {
     overflow: hidden;
     background-color: #000000;
     background-image: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.2) 70%, transparent 100%),
-                      url('../img/Konec.png');
+                      url('img/Konec.png');
     background-size: cover, cover;
     background-position: center, center 25%;
     background-repeat: no-repeat, no-repeat;
@@ -600,7 +601,7 @@ h1 {
     cursor: pointer;
 }
 
-/* ========== СТРАНИЦА ФИЛЬМА (anora.html) ДЕТАЛИ ========== */
+/* ========== СТРАНИЦА ФИЛЬМА ========== */
 .movie-container {
     display: flex;
     gap: 40px;
@@ -815,7 +816,6 @@ h1 {
     border-top: 1px solid #000;
 }
 
-/* Для страниц с сайдбаром — подвал сдвигается вправо */
 body:has(.sidebar) .footer {
     margin-left: 220px;
 }
@@ -898,6 +898,83 @@ body:has(.sidebar) .footer {
     cursor: pointer;
 }
 
+/* ========== СТРАНИЦА ПРОФИЛЯ ========== */
+.profile-page {
+    margin-left: 220px;
+    margin-top: 70px;
+    padding: 40px 30px;
+    background: #ffffff;
+    min-height: calc(100vh - 70px);
+}
+
+.profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.avatar-gray {
+    width: 80px;
+    height: 80px;
+    background-color: #b0b0b0;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.profile-name-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    padding-left: 5px;
+}
+
+.profile-name {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.profile-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.profile-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.profile-icons img:hover {
+    opacity: 1;
+}
+.promoSsection {
+    padding: 40px 0px;
+}
+
+.promoCcontainer {
+    max-width: 900px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.promoBblock {
+    background-color: #e0e0e0;
+    width: 280px;
+    height: 140px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 /* ========== АДАПТИВНОСТЬ ========== */
 @media (max-width: 1024px) {
     header {
@@ -939,6 +1016,10 @@ body:has(.sidebar) .footer {
     }
     .movie-details, .movie-premieres {
         grid-template-columns: 1fr;
+    }
+    .profile-page {
+        margin-left: 0;
+        padding: 20px;
     }
 }
 

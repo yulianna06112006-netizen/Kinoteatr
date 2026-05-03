@@ -2,107 +2,97 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль — Кинотеатр</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
- <header>
+    <!-- Header -->
+    <header>
         <div class="headerLeft">
             <h1>Кинотеатр</h1>
-            <img src="./img/mdi_play.png" alt="">
+            <span style="color: #fff; font-size: 20px;">▶</span>
             <a href="#" class="kino">Онлайн-кинотеатр</a>
         </div>
-
         <div class="searchContainer">
-            <input type="text" placeholder="Фильмы, сериалы, личности" class="searchInput">
-            <img src="./img/material-symbols_search.png" alt="" class="searchIcon">
+            <input type="text" class="searchInput" placeholder="Фильмы, сериалы, личности">
+            <img src="./img/material-symbols_search.png" class="searchIcon" alt="Search">
         </div>
-
         <div class="headerRight">
-            <a href="#" class="notification">
-                <img src="./img/mingcute_notification-line.png" alt="">
-            </a>
-            <a href="profile.html" class="vhod">
-                <img src="./img/icon-park-outline_people.png" alt="">
-                Юливаня
-            </a>
+            <div class="notification">
+                <img src="./img/mingcute_notification-line.png" alt="Уведомления">
+            </div>
+            <div class="vhod">
+                <img src="./img/icon-park-outline_people.png" alt="Профиль">
+                <span>Юливаня</span>
+            </div>
         </div>
     </header>
 
-<main class="profile-page">
-    <div class="profile-container">
-        
-        <!-- Блоки: Подписка, Промокод, История -->
-        <div class="profile-grid">
-            <div class="profile-card">
-                <div class="card-icon">
-                    <img src="./img/ri_diamond-line.png" alt="Подписка">
-                </div>
-                <h3>Подписка</h3>
-                <p>Продлить или изменить тарифный план</p>
-                <button class="profile-btn">Управлять</button>
-            </div>
-
-            <div class="profile-card">
-                <div class="card-icon">
-                    <img src="./img/lsicon_badge-promotion-outline.png" alt="Промокод">
-                </div>
-                <h3>Промокод</h3>
-                <p>Активировать</p>
-                <button class="profile-btn">Активировать</button>
-            </div>
-
-            <div class="profile-card">
-                <div class="card-icon">
-                    <img src="./img/ic_round-history.png" alt="История">
-                </div>
-                <h3>История</h3>
-                <p>Всё, что вы посмотрели</p>
-                <button class="profile-btn">Открыть</button>
-            </div>
-        </div>
-
-        <!-- Блок "Избранное" -->
-        <div class="favorites-section">
-            <h2>Избранное</h2>
-            <div class="favorites-grid">
-                <div class="fav-movie">
-                    <img src="./img/Euphoria.png" alt="Эйфория">
-                    <div class="fav-info">
-                        <h4>Эйфория</h4>
-                        <p>2019, драма</p>
-                    </div>
-                </div>
-                <div class="fav-movie">
-                    <img src="./img/Slovo.png" alt="Слово пацана">
-                    <div class="fav-info">
-                        <h4>Слово пацана</h4>
-                        <p>2025, боевик</p>
-                    </div>
-                </div>
-                <div class="fav-movie">
-                    <img src="./img/TCBR.png" alt="Твое сердце будет разбито">
-                    <div class="fav-info">
-                        <h4>Твое сердце будет разбито</h4>
-                        <p>2026, драма</p>
-                    </div>
+    <div class="profile-page">
+        <div class="profile-container">
+            <div class="profile-name-row">
+                <div class="avatar-gray"></div>
+                <h2 class="profile-name">Юливаня</h2>
+                <div class="profile-icons">
+                    <img src="/img/mdi_edit-outline.png" alt="">
+                    <img src="/img/fluent_settings-32-filled.png" alt="">
                 </div>
             </div>
-        </div>
-
-    </div>
-</main>
-
-<div id="footer"></div>
-
-    <footer class="footer">
-        <div class="footerContent">
+                <section class="promoSsection">
+        <div class="promoCcontainer">
             
+            <div class="promoBblock">
+                <img src="./img/ri_diamond-line.png" alt="Sub" class="promoIcon">
+                <h3 class="promoTitle">Все подписки</h3>
+                <button class="promoAction">Подключить</button>
+            </div>
+
+            <div class="promoBblock">
+                <img src="./img/lsicon_badge-promotion-outline.png" alt="Promo" class="promoIcon">
+                <h3 class="promoTitle">Промокод</h3>
+                <button class="promoAction">Активировать</button>
+            </div>
+            <div class="promoBblock">
+                <img src="./img/lsicon_badge-promotion-outline.png" alt="Promo" class="promoIcon">
+                <h3 class="promoTitle">История</h3>
+                <button class="promoAction">Всё, что вы посмотрели</button>
+            </div>
+
+        </div>
+    </section>
+
+            <!-- Избранное -->
+            <div class="favorites-section">
+                <h2>Избранное</h2>
+                <div class="cards">
+
+    <div class="card">
+        <img src="img/Euphoria.png">
+        <h3>Эйфория</h3>
+        <p>2019, драма</p>
+    </div>
+
+    <div class="card">
+        <img src="img/Slovo.png">
+        <h3>Слово пацана</h3>
+        <p>2025, боевик</p>
+    </div>
+
+    <div class="card">
+        <img src="img/TCBR.png">
+        <h3>Твое сердце будет разбито</h3>
+        <p>2026, драма</p>
+    </div>
+
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footerContent">
             <div class="footerGrid">
-                
                 <div class="footerCol">
                     <h3>О нас</h3>
                     <a href="#">О компании</a>
@@ -114,7 +104,6 @@
                     <a href="#">Политика конфиденциальности</a>
                     <a href="#">Оставить отзыв</a>
                 </div>
-
                 <div class="footerCol">
                     <h3>Разделы</h3>
                     <a href="#">Главная</a>
@@ -123,23 +112,17 @@
                     <a href="#">Сериалы</a>
                     <a href="#">Телеканалы</a>
                 </div>
-
                 <div class="footerCol">
                     <h3>Служба поддержки</h3>
                     <p class="supportText">Мы всегда готовы вам помочь.</p>
                     <p class="supportText">Наши операторы онлайн 24/7</p>
-                    
                     <div class="supportButtons">
                         <button class="chatBtn">Написать в чате</button>
-                        <div class="iconBox">
-                            <img src="./img/material-symbols_mail-outline.png" alt="Почта">
-                            <img src="./img/bi_telephone.png" alt="Телефон">
-                        </div>
+                        <div class="iconBox"><img src="./img/material-symbols_mail-outline.png" alt="Email"></div>
+                        <div class="iconBox"><img src="./img/bi_telephone.png" alt="Phone"></div>
                     </div>
                 </div>
-
             </div>
-
             <div class="socialRow">
                 <img src="./img/vk.png" alt="VK">
                 <img src="./img/lets-icons_insta.png" alt="Instagram">
@@ -147,9 +130,7 @@
                 <img src="./img/Vector.png" alt="X">
                 <img src="./img/ic_baseline-telegram.png" alt="Telegram">
             </div>
-
         </div>
-    </footer>
-
+    </div>
 </body>
 </html>
