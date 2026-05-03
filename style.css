@@ -12,7 +12,6 @@ body {
     font-style: normal;
 }
 
-/* Страницы входа и профиля — полностью белые */
 body:has(.qrCode),
 body:has(.profile-page) {
     background-color: #fff;
@@ -34,7 +33,6 @@ header {
     z-index: 2000;
 }
 
-/* Если на странице есть сайдбар — шапка фиксируется */
 body:has(.sidebar) header {
     position: fixed;
     top: 0;
@@ -182,7 +180,7 @@ h1 {
     background: rgba(0,0,0,0.05);
 }
 
-/* ========== ОСНОВНОЙ КОНТЕНТ (страницы с сайдбаром) ========== */
+/* ========== ОСНОВНОЙ КОНТЕНТ ========== */
 .container {
     margin-left: 220px;
     margin-top: 70px;
